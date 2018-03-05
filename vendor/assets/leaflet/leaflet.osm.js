@@ -28,7 +28,7 @@ L.OSM.CycleMap = L.OSM.TileLayer.extend({
     url: document.location.protocol === 'https:' ?
       'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}{r}.png?apikey={apikey}' :
       'http://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}{r}.png?apikey={apikey}',
-    attribution: '© <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors. Tiles courtesy of <a href="http://www.thunderforest.com/" target="_blank">Andy Allan</a>'
+    attribution: '© <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors. Tiles courtesy of <a href="http://www.thunderforest.com/" target="_blank" rel="noopener">Andy Allan</a>'
   }
 });
 
@@ -37,7 +37,7 @@ L.OSM.TransportMap = L.OSM.TileLayer.extend({
     url:  document.location.protocol === 'https:' ?
       'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}{r}.png?apikey={apikey}' :
       'http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}{r}.png?apikey={apikey}',
-    attribution: '© <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors. Tiles courtesy of <a href="http://www.thunderforest.com/" target="_blank">Andy Allan</a>'
+    attribution: '© <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors. Tiles courtesy of <a href="http://www.thunderforest.com/" target="_blank" rel="noopener">Andy Allan</a>'
   }
 });
 
@@ -48,8 +48,8 @@ L.OSM.MapQuestOpen = L.OSM.TileLayer.extend({
       'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
     subdomains: '1234',
     attribution: '© <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors. ' + document.location.protocol === 'https:' ?
-      'Tiles courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="https://developer.mapquest.com/content/osm/mq_logo.png">' :
-      'Tiles courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">'
+      'Tiles courtesy of <a href="http://www.mapquest.com/" target="_blank" rel="noopener">MapQuest</a> <img src="https://developer.mapquest.com/content/osm/mq_logo.png">' :
+      'Tiles courtesy of <a href="http://www.mapquest.com/" target="_blank" rel="noopener">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">'
   }
 });
 
@@ -60,7 +60,7 @@ L.OSM.HOT = L.OSM.TileLayer.extend({
       'http://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png',
     maxZoom: 20,
     subdomains: 'abc',
-    attribution: '© <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors. Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+    attribution: '© <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors. Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank" rel="noopener">Humanitarian OpenStreetMap Team</a>'
   }
 });
 

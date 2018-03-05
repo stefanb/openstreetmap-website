@@ -17,11 +17,11 @@ class ApplicationHelperTest < ActionView::TestCase
 
       html = linkify(text)
       assert_equal false, html.html_safe?
-      assert_dom_equal "Test <a href=\"#{link}\" rel=\"nofollow\">#{link}</a> is made into a link", html
+      assert_dom_equal "Test <a href=\"#{link}\" rel=\"nofollow noopener\">#{link}</a> is made into a link", html
 
       html = linkify(text.html_safe)
       assert_equal true, html.html_safe?
-      assert_dom_equal "Test <a href=\"#{link}\" rel=\"nofollow\">#{link}</a> is made into a link", html
+      assert_dom_equal "Test <a href=\"#{link}\" rel=\"nofollow noopener\">#{link}</a> is made into a link", html
     end
 
     %w[test@example.com mailto:test@example.com].each do |link|

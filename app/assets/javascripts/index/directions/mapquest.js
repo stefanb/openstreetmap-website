@@ -28,7 +28,7 @@ function MapQuestEngine(id, routeType) {
 
   return {
     id: id,
-    creditline: '<a href="https://www.mapquest.com/" target="_blank">MapQuest</a> <img src="' + document.location.protocol + '//developer.mapquest.com/content/osm/mq_logo.png">',
+    creditline: '<a href="https://www.mapquest.com/" target="_blank" rel="noopener">MapQuest</a> <img src="' + document.location.protocol + '//developer.mapquest.com/content/osm/mq_logo.png">',
     draggable: false,
 
     getRoute: function (points, callback) {

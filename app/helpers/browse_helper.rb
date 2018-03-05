@@ -155,7 +155,8 @@ module BrowseHelper
 
     {
       :url => "https://#{lang}.wikipedia.org/wiki/#{value}?uselang=#{I18n.locale}#{encoded_section}",
-      :title => value + section
+      :title => value + section,
+      :rel => "noopener"
     }
   end
 
@@ -164,7 +165,8 @@ module BrowseHelper
     if key == "wikidata" && value =~ /^[Qq][1-9][0-9]*$/
       return [{
         :url => "//www.wikidata.org/wiki/#{value}?uselang=#{I18n.locale}",
-        :title => value
+        :title => value,
+        :rel => "noopener"
       }]
     # Key has to be one of the accepted wikidata-tags
     elsif key =~ /(architect|artist|brand|operator|subject):wikidata/ &&
@@ -172,7 +174,10 @@ module BrowseHelper
           value =~ /^[Qq][1-9][0-9]*(\s*;\s*[Qq][1-9][0-9]*)*$/
       # Splitting at every semicolon to get a separate hash for each wikidata-ID
       return value.split(";").map do |id|
-        { :title => id, :url => "//www.wikidata.org/wiki/#{id.strip}?uselang=#{I18n.locale}" }
+        { :title => id, 
+          :url => "//www.wikidata.org/wiki/#{id.strip}?uselang=#{I18n.locale}",
+          :rel => "noopener"
+        }
       end
     end
     nil

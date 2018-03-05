@@ -6,7 +6,7 @@ function OSRMEngine() {
 
   return {
     id: "osrm_car",
-    creditline: '<a href="http://project-osrm.org/" target="_blank">OSRM</a>',
+    creditline: '<a href="http://project-osrm.org/" target="_blank" rel="noopener">OSRM</a>',
     draggable: true,
 
     _transformSteps: function(input_steps, line) {
