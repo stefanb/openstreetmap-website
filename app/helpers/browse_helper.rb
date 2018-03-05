@@ -173,8 +173,8 @@ module BrowseHelper
           # Value has to be a semicolon-separated list of wikidata-IDs (whitespaces allowed before and after semicolons)
           value =~ /^[Qq][1-9][0-9]*(\s*;\s*[Qq][1-9][0-9]*)*$/
       # Splitting at every semicolon to get a separate hash for each wikidata-ID
-      return value.split(";").map do |id|
-        { :title => id, 
+      return value.split(";").map do |id| {
+          :title => id,
           :url => "//www.wikidata.org/wiki/#{id.strip}?uselang=#{I18n.locale}",
           :rel => "noopener"
         }
